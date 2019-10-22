@@ -58,9 +58,12 @@ app.get('/greeting/:id', (req, res) => {
 app.get('/yo/:buddy', (req, res) => {
   res.send(`<h1>Yo, ${req.params.buddy}!</h1>`)
 })
-app.get('/movie', (req, res) => {
-  res.send('<h1>your picked movie is </h1>')
+let movie = ['castaway', 'titanic', 'godfather', 'gladiator']
+
+app.get('/movie', (req,res) => {
+    res.send(`<h1>Starter movie: ${movie[randomInt(0, movie.length)]}</h1>`)
 })
+
 // provide multiple query parameters (named first and last) with ? and &
 app.get('/fancy', (req, res) => {
   const first = req.query.first
@@ -84,11 +87,11 @@ app.get('/fortune', (req,res) => {
     res.send(`The answer is ... wait for it ... ${fortunes[randomInt(0, fortunes.length)]}`)
   }
 })
-let movie = ['castaway', 'titanic', 'godfather', 'gladiator']
+// <!--let movie = ['castaway', 'titanic', 'godfather', 'gladiator']
 
-app.get('/movie', (req,res) => {
-    res.send(`<h1>Starter movie: ${movie[randomInt(0, movie.length)]}</h1>`)
-})
+// app.get('/movie', (req,res) => {
+//     res.send(`<h1>Starter movie: ${movie[randomInt(0, movie.length)]}</h1>`)
+// })
 
 // Use middleware to handle all non-managed routes (e.g. /xyz)
 // https://expressjs.com/en/api.html#req.originalUrl
