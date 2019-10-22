@@ -17,7 +17,7 @@
   "devDependencies": {
     "nodemon": "latest"
   },
-  "homepage": "https://node-express-app-563.herokuapp.com/",
+  "homepage": "https://node-express-app-kavya.herokuapp.com/",
   "keywords": [
     "Express.js",
     "JavaScript",
@@ -29,7 +29,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/denisecase/node-express-app"
+    "url": "https://github.com/kavyareddy536886/node-express-app"
   },
   "scripts": {
     "dev": "nodemon app.js",

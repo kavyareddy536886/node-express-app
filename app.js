@@ -45,7 +45,7 @@ app.get('/big', (req, res) => {
 
 // or respond with JSON
 app.get('/json', (req, res) => {
-  res.send('{"name" : "Nandini"}')
+  res.send('{"name" : "kavyareddy"}')
 })
 
 // :name indicates a parameter at this location in the URI
