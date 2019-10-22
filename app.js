@@ -24,12 +24,12 @@ app.get('/', function (req, res) {
     '/big <br>' +
     '/json <br>' +
     '/greeting/yourname <br>' +
-    '/yo/Dr.Rogers <br>' +
+    '/yo/Kavya <br>' +
     '/fortune <br>' +
     '/movie<br>'+
-    '/fancy/?first=Denise&last=Case <br>' +
+    '/fancy/?first=Kavya Reddy&last=Mylapurapu <br>' +
     '<br> <br>' +
-    'Fork the source code from <a href="https://github.com/denisecase/node-express-app">https://github.com/denisecase/node-express-app</a>'
+    'Fork the source code from <a href="https://github.com/kavyareddy536886/node-express-app">https://github.com/kavyareddy536886/node-express-app</a>'
   )
 })
 
@@ -58,10 +58,10 @@ app.get('/greeting/:id', (req, res) => {
 app.get('/yo/:buddy', (req, res) => {
   res.send(`<h1>Yo, ${req.params.buddy}!</h1>`)
 })
-let movie = ['castaway', 'titanic', 'godfather', 'gladiator']
+let movie = ['Castaway', 'Forrest Gump', 'Titanic', 'The Godfather', 'Gladiator','Time Machine','A Beautiful Mind','Robin Hood']
 
 app.get('/movie', (req,res) => {
-    res.send(`<h1>Starter movie: ${movie[randomInt(0, movie.length)]}</h1>`)
+    res.send(`<h1>Try watching  <i>${movie[randomInt(0, movie.length)]}</i> movie this weekend.<br>Happy Weekend.</h1>`)
 })
 
 // provide multiple query parameters (named first and last) with ? and &
@@ -87,11 +87,7 @@ app.get('/fortune', (req,res) => {
     res.send(`The answer is ... wait for it ... ${fortunes[randomInt(0, fortunes.length)]}`)
   }
 })
-// <!--let movie = ['castaway', 'titanic', 'godfather', 'gladiator']
 
-// app.get('/movie', (req,res) => {
-//     res.send(`<h1>Starter movie: ${movie[randomInt(0, movie.length)]}</h1>`)
-// })
 
 // Use middleware to handle all non-managed routes (e.g. /xyz)
 // https://expressjs.com/en/api.html#req.originalUrl
@@ -109,8 +105,8 @@ app.listen(port, hostname, () => {
   console.log(`   Try /fortune`)
   console.log(`   Try /movie`)
   console.log(`   Try /greeting/yourname`)
-  console.log(`   Try /yo/Dr.Rogers`)
-  console.log(`   Try /fancy/?first=Denise&last=Case`)
+  console.log(`   Try /yo/Kavya`)
+  console.log(`   Try /fancy/?first=Kavya Reddy&last=Myalpurapu`)
   console.log('\n Hit CTRL-C CTRL-C to stop\n')
 })
 
