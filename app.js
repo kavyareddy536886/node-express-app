@@ -26,6 +26,7 @@ app.get('/', function (req, res) {
     '/greeting/yourname <br>' +
     '/yo/Dr.Rogers <br>' +
     '/fortune <br>' +
+    '/movie<br>'+
     '/fancy/?first=Denise&last=Case <br>' +
     '<br> <br>' +
     'Fork the source code from <a href="https://github.com/denisecase/node-express-app">https://github.com/denisecase/node-express-app</a>'
@@ -57,7 +58,9 @@ app.get('/greeting/:id', (req, res) => {
 app.get('/yo/:buddy', (req, res) => {
   res.send(`<h1>Yo, ${req.params.buddy}!</h1>`)
 })
-
+app.get('/movie', (req, res) => {
+  res.send('<h1>your picked movie is </h1>')
+})
 // provide multiple query parameters (named first and last) with ? and &
 app.get('/fancy', (req, res) => {
   const first = req.query.first
