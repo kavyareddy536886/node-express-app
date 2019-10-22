@@ -81,6 +81,11 @@ app.get('/fortune', (req,res) => {
     res.send(`The answer is ... wait for it ... ${fortunes[randomInt(0, fortunes.length)]}`)
   }
 })
+let movie = ['castaway', 'titanic', 'godfather', 'gladiator']
+
+app.get('/movie', (req,res) => {
+    res.send(`<h1>Starter movie: ${movie[randomInt(0, movie.length)]}</h1>`)
+})
 
 // Use middleware to handle all non-managed routes (e.g. /xyz)
 // https://expressjs.com/en/api.html#req.originalUrl
@@ -96,6 +101,7 @@ app.listen(port, hostname, () => {
   console.log(`   Try /big`)
   console.log(`   Try /json`)
   console.log(`   Try /fortune`)
+  console.log(`   Try /movie`)
   console.log(`   Try /greeting/yourname`)
   console.log(`   Try /yo/Dr.Rogers`)
   console.log(`   Try /fancy/?first=Denise&last=Case`)
